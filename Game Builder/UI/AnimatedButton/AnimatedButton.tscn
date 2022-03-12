@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/AnimatedButton/AnimatedButton.gd" type="Script" id=1]
+[ext_resource path="res://UI/AnimatedButton/AnimatedButton.tres" type="StyleBox" id=2]
+[ext_resource path="res://UI/AnimatedButton/Unselect.wav" type="AudioStream" id=3]
+[ext_resource path="res://UI/AnimatedButton/Select.wav" type="AudioStream" id=5]
+
+[node name="AnimatedButton" type="Button"]
+margin_right = 128.0
+margin_bottom = 64.0
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+shortcut_in_tooltip = false
+text = "Text"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AudioSelect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="AudioUnselect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_AnimatedButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_AnimatedButton_mouse_exited"]

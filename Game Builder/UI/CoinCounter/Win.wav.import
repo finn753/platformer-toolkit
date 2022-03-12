@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Win.wav-d9027230a3c889758a52c43fddea8d20.sample"
+
+[deps]
+
+source_file="res://UI/CoinCounter/Win.wav"
+dest_files=[ "res://.import/Win.wav-d9027230a3c889758a52c43fddea8d20.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
