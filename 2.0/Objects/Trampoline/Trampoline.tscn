@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Objects/Trampoline/Assets/Cloud.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Trampoline/Assets/BounceArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Trampoline/Assets/Trampoline.gd" type="Script" id=3]
+
+[node name="Trampoline" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 8 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -8 )
+
+[node name="BounceArea" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, -4 )
+scale = Vector2( 3, 0.5 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="on_body_bounced" from="BounceArea" to="." method="_on_BounceArea_on_body_bounced"]
