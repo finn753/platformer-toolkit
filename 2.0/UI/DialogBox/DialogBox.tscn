@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonts/yoster.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/DialogBox/DialogBox.gd" type="Script" id=2]
+[ext_resource path="res://UI/AnimatedButton/Unselect.wav" type="AudioStream" id=3]
+[ext_resource path="res://UI/AnimatedButton/Select.wav" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.94902, 0.65098, 0.368627, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.54902, 0.247059, 0.364706, 1 )
+
+[node name="DialogBox" type="Label"]
+margin_right = 1024.0
+margin_bottom = 256.0
+rect_pivot_offset = Vector2( 512, 128 )
+rect_clip_content = true
+custom_colors/font_color = Color( 0.341176, 0.160784, 0.294118, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Hallo ich bin Texti"
+autowrap = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="On" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Off" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

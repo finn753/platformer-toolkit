@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI/CoinCounter/CoinCounter.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Coin/Assets/Coin.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/yoster.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://UI/CoinCounter/Win.wav" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 2
+outline_color = Color( 1, 1, 0.921569, 1 )
+font_data = ExtResource( 3 )
+
+[node name="CoinCounter" type="Label"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_right = -919.0
+margin_bottom = -567.0
+custom_colors/font_color = Color( 0.94902, 0.65098, 0.368627, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "0 ] 0"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -24, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( -104, -64 )
+emitting = false
+amount = 128
+lifetime = 4.0
+explosiveness = 1.0
+lifetime_randomness = 1.0
+local_coords = false
+direction = Vector2( 1, 1 )
+spread = 67.0
+initial_velocity = 400.0
+initial_velocity_random = 0.69
+angular_velocity = 424.42
+angular_velocity_random = 0.98
+linear_accel = 71.57
+linear_accel_random = 1.0
+scale_amount = 12.0
+scale_amount_random = 0.25
+color = Color( 0.847059, 0.894118, 1, 1 )
+hue_variation = 1.0
+hue_variation_random = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
