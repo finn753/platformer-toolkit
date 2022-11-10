@@ -1,8 +1,11 @@
 # platformer-toolkit
 A Godot Project you can use to create your own 2d platformer
 
-Youtube:
+## Youtube
+### Update
+[![Youtube Video](https://img.youtube.com/vi/cnJaiOHai6Q/0.jpg)](https://www.youtube.com/watch?v=cnJaiOHai6Q)
 
+### Original Video + Tutorial (I will update it in a few weeks/months)
 [![Youtube Video](https://img.youtube.com/vi/wXCLaRMhl9c/0.jpg)](https://www.youtube.com/watch?v=wXCLaRMhl9c)
 
 ## Player:
